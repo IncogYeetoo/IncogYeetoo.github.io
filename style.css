@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+
+:root {
+    --window-color: cornflowerblue;
+    --bg-color: #18183a;
+    --text-color: whitesmoke;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas, monospace;
+}
+
+.origin {
+    display: flex; 
+    flex-direction: column;
+    flex:1;
+
+
+    height: auto;
+    width: 70%;
+    margin: auto;
+
+    padding: 20px;
+}
+
+/* --------------------------------------------------- */
+/* TITLE SECTION */
+/* --------------------------------------------------- */
+
+.TitleTitle {
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Press Start 2P', cursive;
+    margin: 20px;
+    color: var(--window-color);
+    transform: skewX(15deg);
+}
+
+.WindowControlButtons {
+    position: absolute;
+    right: 10px;
+}
+
+/* --------------------------------------------------- */
+/* WINDOW SECTION */
+/* --------------------------------------------------- */
+
+
+.Window {
+    border: 5px solid var(--window-color);
+    background-color: var(--bg-color);
+    width: 100%;
+}
+
+.WindowTitle {
+    text-align: left;
+    font-size: 28px;
+    font-family: 'Pixelify Sans', monospace;
+
+    background-color: var(--window-color);
+    color: whitesmoke;
+    padding-left: 3px;
+}
+
+.para1 {
+    text-align: left;
+    color: var(--text-color);
+    font-size: 18px;
+    padding: 10px;
+    background-color: transparent;
+}
+
+/* --------------------------------------------------- */
+/* IMAGE OPACITY HOVER */
+/* --------------------------------------------------- */
+
+.hover-img-opacity {
+  opacity: 1;
+  transition: opacity 0.3s ease; /* smooth fade */
+  cursor: pointer;
+}
+
+.hover-img-opacity:hover {
+  opacity: 0.3; /* lower opacity on hover */
+}
+
+
+
+
+/* --------------------------------------------------- */
+/* BACKGROUND PATTERN */
+/* --------------------------------------------------- */
+
+.pattern-background {
+
+    animation:moveBackground 1s linear infinite;
+
+    background-image: radial-gradient(circle at 25% 25%, cornflowerblue 2px, transparent 2px);
+    background-size: 40px 40px;
+    background-repeat: repeat;
+    opacity: 1;
+    background-color: var(--bg-color);
+
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0, 0 0;
+    }
+    100% {
+        background-position: 40px 40px, 0 0;
+    }
+}
+
+/* --------------------------------------------------- */
+
+
+
+/* --------------------------------------------------- */
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    @media (max-width: 768px) {}
+
+    .origin {
+        flex-direction: column;
+        background-color: red;
+    }
+
+}
+
