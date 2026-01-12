@@ -1,12 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Homenaje&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
 
 :root {
-    --window-color: cornflowerblue;
-    --bg-color: #18183a;
-    --text-color: whitesmoke;
+    --neon-color: lightgrey;
+    --window-color: #242424;
+    --bg-color: #404040;
 }
 
 * {
@@ -17,40 +18,54 @@
 }
 
 .origin {
-    display: flex; 
+    display: flex;
     flex-direction: column;
-    flex:1;
+    flex: 1;
 
+    background-color: #242424;
 
     height: auto;
-    width: 70%;
+    width: 85%;
     margin: auto;
+    border-radius: 10px;
 
     padding: 20px;
 }
 
-/* --------------------------------------------------- */
-/* TITLE SECTION */
-/* --------------------------------------------------- */
+body {
+  background: #242424;
+}
 
-.TitleTitle {
+
+
+.titletitle {
     text-align: center;
-    font-size: 48px;
-    font-family: 'Press Start 2P', cursive;
+
+    font-size: 24px;
+    font-family: homenaje, serif;
+
     margin: 20px;
-    color: var(--window-color);
-    transform: skewX(15deg);
+    color: whitesmoke;
+
+    position: relative;
+
+    text-shadow:
+        0 0 5px var(--neon-color),
+        0 0 10px var(--neon-color),
+        0 0 20px var(--neon-color),
+        0 0 40px var(--neon-color),
+        0 0 80px var(--neon-color);
 }
 
 .WindowControlButtons {
     position: absolute;
-    right: 10px;
+    top: 0px;
+    right: 0px;
 }
 
 /* --------------------------------------------------- */
 /* WINDOW SECTION */
 /* --------------------------------------------------- */
-
 
 .Window {
     border: 5px solid var(--window-color);
@@ -74,65 +89,85 @@
     font-size: 18px;
     padding: 10px;
     background-color: transparent;
+    color: whitesmoke;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 /* --------------------------------------------------- */
-/* IMAGE OPACITY HOVER */
+/* WINDOW SECTION */
 /* --------------------------------------------------- */
 
-.hover-img-opacity {
-  opacity: 1;
-  transition: opacity 0.3s ease; /* smooth fade */
-  cursor: pointer;
-}
 
-.hover-img-opacity:hover {
-  opacity: 0.3; /* lower opacity on hover */
+
+
+.glow {
+  filter: drop-shadow(0 0 20px var(--neon-color));
 }
 
 
+.brokenNeonText {
+    display: inline-block;
+    animation: neonBlink 1.5s infinite;
+
+    transform: rotate(190deg);
+    z-index: 1;
+
+    text-align: center;
+    font-size: 48px;
+    font-family: homenaje, serif;
+    color: whitesmoke;
+
+    position: absolute;
+    bottom: -10px;
+    margin-left: 3px;
+}
+
+@keyframes neonBlink {
+
+    0%,
+    19%,
+    21%,
+    50%,
+    51%,
+    100% {
+        text-shadow:
+            0 0 5px var(--neon-color),
+            0 0 10px var(--neon-color),
+            0 0 20px var(--neon-color),
+            0 0 40px var(--neon-color),
+            0 0 80px var(--neon-color);
+            transform: rotate(190deg);
+        color: whitesmoke;
+    }
+
+    20%,
+    50% {
+        text-shadow: none;
+        color: #222;
+        transform: rotate(220deg);
+
+        /* dimmed/off color */
+    }
+}
 
 
-/* --------------------------------------------------- */
-/* BACKGROUND PATTERN */
-/* --------------------------------------------------- */
 
 .pattern-background {
+    animation: moveBackground 10s linear infinite;
 
-    animation:moveBackground 1s linear infinite;
-
-    background-image: radial-gradient(circle at 25% 25%, cornflowerblue 2px, transparent 2px);
-    background-size: 40px 40px;
+    background-image: radial-gradient(circle at 25% 25%, #242424 2px, transparent 2px);
+    background-size: 20px 20px;
     background-repeat: repeat;
     opacity: 1;
-    background-color: var(--bg-color);
-
+    background-color: #404040;
 }
 
 @keyframes moveBackground {
     0% {
         background-position: 0 0, 0 0;
     }
+
     100% {
         background-position: 40px 40px, 0 0;
     }
 }
-
-/* --------------------------------------------------- */
-
-
-
-/* --------------------------------------------------- */
-
-
-/* Responsive */
-@media (max-width: 768px) {
-    @media (max-width: 768px) {}
-
-    .origin {
-        flex-direction: column;
-        background-color: red;
-    }
-
-}
-
