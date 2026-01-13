@@ -32,30 +32,34 @@
     padding: 20px;
 }
 
-body {
-  background: #242424;
-}
 
-/* #region nigga stuff */
+/* --------------------------------------------------- */
+/* #region TEST*/
+/* --------------------------------------------------- */
 
+/* --------------------------------------------------- */
+/* #endregion */
+/* --------------------------------------------------- */
+
+
+/* --------------------------------------------------- */
+/* #region HEADER*/
+/* --------------------------------------------------- */
 .header-container {
-    display:flex;
+    display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.titletitle {
+.header-title {
 
     text-align: center;
-
-    
-
     font-size: 48px;
     font-family: homenaje, serif;
 
     color: whitesmoke;
 
-    position:relative;
+    position: relative;
 
 
 
@@ -67,27 +71,21 @@ body {
         0 0 80px var(--neon-color);
 }
 
-.WindowControlButtons {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-}
-
+/* --------------------------------------------------- */
 /* #endregion */
-
-
-
-/* --------------------------------------------------- */
-/* WINDOW SECTION */
 /* --------------------------------------------------- */
 
-.Window {
+/* --------------------------------------------------- */
+/* #region WINDOW*/
+/* --------------------------------------------------- */
+
+.window-container {
     border: 5px solid var(--window-color);
     background-color: var(--bg-color);
     width: 100%;
 }
 
-.WindowTitle {
+.window-title {
     text-align: left;
     font-size: 28px;
     font-family: 'Pixelify Sans', monospace;
@@ -97,7 +95,7 @@ body {
     padding-left: 3px;
 }
 
-.para1 {
+.window-paragraph {
     text-align: left;
     color: var(--text-color);
     font-size: 18px;
@@ -108,18 +106,20 @@ body {
 }
 
 /* --------------------------------------------------- */
-/* WINDOW SECTION */
+/* #endregion */
 /* --------------------------------------------------- */
 
 
+/* --------------------------------------------------- */
+/* #region EFFECTS*/
+/* --------------------------------------------------- */
 
 
-.glow {
-  filter: drop-shadow(0 0 20px var(--neon-color));
+.image-glow {
+    filter: drop-shadow(0 0 20px var(--neon-color));
 }
 
-
-.brokenNeonText {
+.text-brokenNeon {
     animation: neonBlink 1.5s infinite;
 }
 
@@ -149,53 +149,141 @@ body {
     }
 }
 
-/* --------------------------------------------------- */
-/* Effects */
-/* --------------------------------------------------- */
-
-
-@keyframes simpleCRTshadow{
-  0%{text-shadow:.40px 0 1px rgba(0,30,255,.5),-.40px 0 1px rgba(255,0,80,.3),0 0 3px}
-  5%{text-shadow:2.80px 0 1px rgba(0,30,255,.5),-2.80px 0 1px rgba(255,0,80,.3),0 0 3px}
-  10%{text-shadow:.03px 0 1px rgba(0,30,255,.5),-.03px 0 1px rgba(255,0,80,.3),0 0 3px}
-  15%{text-shadow:.40px 0 1px rgba(0,30,255,.5),-.40px 0 1px rgba(255,0,80,.3),0 0 3px}
-  20%{text-shadow:3.48px 0 1px rgba(0,30,255,.5),-3.48px 0 1px rgba(255,0,80,.3),0 0 3px}
-  25%{text-shadow:1.61px 0 1px rgba(0,30,255,.5),-1.61px 0 1px rgba(255,0,80,.3),0 0 3px}
-  30%{text-shadow:.70px 0 1px rgba(0,30,255,.5),-.70px 0 1px rgba(255,0,80,.3),0 0 3px}
-  35%{text-shadow:3.90px 0 1px rgba(0,30,255,.5),-3.90px 0 1px rgba(255,0,80,.3),0 0 3px}
-  40%{text-shadow:3.87px 0 1px rgba(0,30,255,.5),-3.87px 0 1px rgba(255,0,80,.3),0 0 3px}
-  45%{text-shadow:2.23px 0 1px rgba(0,30,255,.5),-2.23px 0 1px rgba(255,0,80,.3),0 0 3px}
-  50%{text-shadow:.08px 0 1px rgba(0,30,255,.5),-.08px 0 1px rgba(255,0,80,.3),0 0 3px}
-  55%{text-shadow:2.38px 0 1px rgba(0,30,255,.5),-2.38px 0 1px rgba(255,0,80,.3),0 0 3px}
-  60%{text-shadow:2.20px 0 1px rgba(0,30,255,.5),-2.20px 0 1px rgba(255,0,80,.3),0 0 3px}
-  65%{text-shadow:2.86px 0 1px rgba(0,30,255,.5),-2.86px 0 1px rgba(255,0,80,.3),0 0 3px}
-  70%{text-shadow:.49px 0 1px rgba(0,30,255,.5),-.49px 0 1px rgba(255,0,80,.3),0 0 3px}
-  75%{text-shadow:1.89px 0 1px rgba(0,30,255,.5),-1.89px 0 1px rgba(255,0,80,.3),0 0 3px}
-  80%{text-shadow:.08px 0 1px rgba(0,30,255,.5),-.08px 0 1px rgba(255,0,80,.3),0 0 3px}
-  85%{text-shadow:.10px 0 1px rgba(0,30,255,.5),-.10px 0 1px rgba(255,0,80,.3),0 0 3px}
-  90%{text-shadow:3.44px 0 1px rgba(0,30,255,.5),-3.44px 0 1px rgba(255,0,80,.3),0 0 3px}
-  95%{text-shadow:2.18px 0 1px rgba(0,30,255,.5),-2.18px 0 1px rgba(255,0,80,.3),0 0 3px}
-  100%{text-shadow:2.62px 0 1px rgba(0,30,255,.5),-2.62px 0 1px rgba(255,0,80,.3),0 0 3px}
-}
-
 .crt {
-  animation: simpleCRTshadow 1.6s infinite;
+    animation: simpleCRTshadow 1.6s infinite;
+}
+
+@keyframes simpleCRTshadow {
+    0% {
+        text-shadow: .40px 0 1px rgba(0, 30, 255, .5), -.40px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    5% {
+        text-shadow: 2.80px 0 1px rgba(0, 30, 255, .5), -2.80px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    10% {
+        text-shadow: .03px 0 1px rgba(0, 30, 255, .5), -.03px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    15% {
+        text-shadow: .40px 0 1px rgba(0, 30, 255, .5), -.40px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    20% {
+        text-shadow: 3.48px 0 1px rgba(0, 30, 255, .5), -3.48px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    25% {
+        text-shadow: 1.61px 0 1px rgba(0, 30, 255, .5), -1.61px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    30% {
+        text-shadow: .70px 0 1px rgba(0, 30, 255, .5), -.70px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    35% {
+        text-shadow: 3.90px 0 1px rgba(0, 30, 255, .5), -3.90px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    40% {
+        text-shadow: 3.87px 0 1px rgba(0, 30, 255, .5), -3.87px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    45% {
+        text-shadow: 2.23px 0 1px rgba(0, 30, 255, .5), -2.23px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    50% {
+        text-shadow: .08px 0 1px rgba(0, 30, 255, .5), -.08px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    55% {
+        text-shadow: 2.38px 0 1px rgba(0, 30, 255, .5), -2.38px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    60% {
+        text-shadow: 2.20px 0 1px rgba(0, 30, 255, .5), -2.20px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    65% {
+        text-shadow: 2.86px 0 1px rgba(0, 30, 255, .5), -2.86px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    70% {
+        text-shadow: .49px 0 1px rgba(0, 30, 255, .5), -.49px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    75% {
+        text-shadow: 1.89px 0 1px rgba(0, 30, 255, .5), -1.89px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    80% {
+        text-shadow: .08px 0 1px rgba(0, 30, 255, .5), -.08px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    85% {
+        text-shadow: .10px 0 1px rgba(0, 30, 255, .5), -.10px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    90% {
+        text-shadow: 3.44px 0 1px rgba(0, 30, 255, .5), -3.44px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    95% {
+        text-shadow: 2.18px 0 1px rgba(0, 30, 255, .5), -2.18px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    100% {
+        text-shadow: 2.62px 0 1px rgba(0, 30, 255, .5), -2.62px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
 }
 
 /* --------------------------------------------------- */
-/* BG */
+/* #endregion */
 /* --------------------------------------------------- */
+
+
+/* --------------------------------------------------- */
+/* #region BACKGROUND*/
+/* --------------------------------------------------- */
+
 
 .crt::before {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-  z-index: 2;
-  background-size: 100% 2px, 3px 100%;
-  pointer-events: none;
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background:
+        linear-gradient(rgba(18, 16, 16, 0) 50%,
+            rgba(0, 0, 0, 0.25) 50%),
+        linear-gradient(90deg,
+            rgba(255, 0, 0, 0.06),
+            rgba(0, 255, 0, 0.02),
+            rgba(0, 0, 255, 0.06));
+
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+    z-index: 9999;
 }
+
+.city-bg {
+    background-color: #1a202c;
+    background-image: url(./images/dither-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    
+
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+/* --------------------------------------------------- */
+/* #endregion */
+/* --------------------------------------------------- */
+
