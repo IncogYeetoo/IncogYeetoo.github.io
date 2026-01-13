@@ -15,6 +15,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: consolas, monospace;
+    color: whitesmoke;
 }
 
 .origin {
@@ -22,12 +23,12 @@
     flex-direction: column;
     flex: 1;
 
-    background-color: #242424;
+    background-color: rgba(36, 36, 36, 0.7);
+
 
     height: auto;
     width: 85%;
     margin: auto;
-    border-radius: 10px;
 
     padding: 20px;
 }
