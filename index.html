@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <title>New IncogYeetoo Tab</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="snow.scss">
 </head>
 
 <body class="crt city-bg">
@@ -13,43 +12,47 @@
     
     <br>
 
-        <div class="origin windows-border">
-
-            <!-- Tab -->
-            <div class="window-bar">
-                
-
-            <div class="window-title">Home</div>
-
-            <div class="window-controls">
-                <button class="win-btn minimize">—</button>
-                <button class="win-btn maximize">□</button>
-                <button class="win-btn close">✕</button>
-            </div>
-        </div>
+    <div class="origin">
 
 
         <!-- Header -->
 
-        <div class="header-container header-container-bg">
+        <div class="header-container">
             <br>
-            <br>
-            <image class="image-glow header-title" src="./images/incognito.png" style="width: 100px;"></image>
+            <image class="image-glow header-title" src="./images/incognito.png" style="width: 150px;"></image>
             <h1 class="header-title">
                 <span class="header-title text-brokenNeon">You've gone</span>
                 IncogYeeto<span class="header-title text-brokenNeon">o</span>
             </h1>
+            <br>
         </div>
+
+        <br>
+
+        <!-- About Me -->
+
+        <div class="body-container">
+            <div class="window-container" style="width: 100%;">
+                <h2 class="window-title">//Welcome</h2>
+                <p class="window-paragraph">Ello, this is my personal webpage so i can practice coding and share my interests. <br>
+                    this website is <strong>heavily</strong>  work in progress, most of it is self-taught so forgive any scuffness.</p>
+            </div>
+        </div>
+
 
         <!-- Music Bar -->
 
-        <div class="music-bar">
-            <p>test</p>
+        <div class="body-container">
+            <div class="window-container" style="width: 100%; background-color: transparent;">
+                <h2 class="window-title">//Playlists (music not mine)</h2>
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7e8PP5hhw3SC2RRGO8bpPa?utm_source=generator&theme=0&si=113f030693c6456d" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+
         </div>
+        
+        <!-- Body -->
 
-        <!-- Bar 1 -->
-
-        <div style="display:flex; flex-direction: row; gap: 20px;">
+        <div class="body-container">
 
             <div class="window-container" style="width: 30%;">
                 <h2 class="window-title">//Menu</h2>
@@ -84,7 +87,7 @@
 
         <br>
 
-        <div style="display:flex; flex-direction: row; gap: 20px;">
+        <div class="body-container">
 
             <div class="window-container" style="width: 15%">
                 <h2 class="window-title">//Test</h2>
@@ -92,21 +95,14 @@
 
             </div>
 
-            <div class="window-container" style="width: 20%">
+            <div class="window-container" style="width: auto;">
                 <h2 class="window-title">//Guestbook</h2>
                 <p class="window-paragraph">
                     yes
                 </p>
             </div>
 
-            <div class="window-container">
-                <h2 class="window-title">//Idk</h2>
-                <div class="win8-panel">
-                    Windows 8 style bevel
-                </div>
-            </div>
-
-            <div class=" window-container" style="width: auto; margin-left: auto;">
+            <div class=" window-container" style="width: 26.1%; margin-left: auto;">
                 <h2 class="window-title">//Furina pic</h2>
                 <img src="./images/FurinaScarf.jpg" style="width: 400px;"></img>
                 <p class="window-paragraph">mandatory</p>
@@ -118,4 +114,6 @@
 
     </div>
 
+
+    <div class="snow-overlay"></div>
 </body>

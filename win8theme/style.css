@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Homenaje&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+
+:root {
+    --neon-color: lightgrey;
+    --window-color: #242424;
+    --bg-color: #1a202c;
+}
+
+.origin {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+        
+    height: auto;
+    width: 50%;
+    margin: auto;
+
+    padding: 2px
+
+}
+
+
+/* --------------------------------------------------- */
+/* #region Windows Border*/
+/* --------------------------------------------------- */
+
+.windows-border {
+    border: 2px solid #949494;          /* outer highlight */
+
+    box-shadow:
+
+        /* --- OUTER --- */
+
+        /* white light 1 */
+        -0.5px -0.5px 0 0.5px #cccccc,
+
+        /* shadow 1 */
+        0px 0px 0 1px #696969,
+
+        /* white light 2 */
+        -0.5px -0.5px 0 1.5px #b4b4b4,
+
+        /* shadow 2 */
+        0px 0px 0 2px #2d2d2d,
+
+        /* --- INNER --- */
+
+        /*white light 1 */
+        inset -1px -1px 0 #cccccc,
+
+        /* shadow 1 */
+        inset  1px 1px 0 #696969,
+
+        /* white light 2 */
+        inset -2px -2px 0 #b4b4b4,
+
+        /* shadow 2 */
+        inset 2px 2px 0 #2d2d2d;
+}
+
+/* --------------------------------------------------- */
+/* #endregion */
+/* --------------------------------------------------- */
+
+/* --------------------------------------------------- */
+/* #region Windows Buttons*/
+/* --------------------------------------------------- */
+
+.window-bar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 36px;
+    padding: 0 0 0 12px;
+
+    background: #1f1f1f;
+    color: #f0f0f0;
+
+    font-family: "Segoe UI", sans-serif;
+    user-select: none;
+
+    box-shadow:
+                0 0 0 1px #1f1f1f,
+                0 0 0 4px #949494,
+                0px 4px 0 1px #696969,
+                -1px 6px 0 0px #2d2d2d;
+}
+
+
+
+/* title */
+.window-title {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* right-side controls */
+.window-controls {
+    display: flex;
+    height: 100%;
+}
+
+/* buttons */
+.win-btn {
+    width: 46px;
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+    color: #f0f0f0;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    transition: background 0.12s;
+}
+
+/* hover states */
+.win-btn:hover {
+    background: #3a3a3a;
+}
+
+.close:hover {
+    background: #c42b1c;
+}
+
+/* --------------------------------------------------- */
+/* #endregion */
+/* --------------------------------------------------- */
+
+/* --------------------------------------------------- */
+/* #region HEADER*/
+/* --------------------------------------------------- */
+.header-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+.header-container::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    background-image: url(./images/dither-bg.png);
+    background-size: cover;
+    background-position: bottom -75px left;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.header-title {
+
+    text-align: center;
+    font-size: 48px;
+    font-family: homenaje, serif;
+
+    color: whitesmoke;
+
+    position: relative;
+
+
+
+    text-shadow:
+        0 0 5px var(--neon-color),
+        0 0 10px var(--neon-color),
+        0 0 20px var(--neon-color),
+        0 0 40px var(--neon-color),
+        0 0 80px var(--neon-color);
+}
+
+/* --------------------------------------------------- */
+/* #endregion */
+/* --------------------------------------------------- */
+
+/* --------------------------------------------------- */
+/* #region Music Bar*/
+/* --------------------------------------------------- */
+
+.music-bar{
+    background: #1f1f1f;
+
+    height: 30px;
+    vertical-align: center;
+}
+
+/* --------------------------------------------------- */
+/* #endregion */
+/* --------------------------------------------------- */
+
+/* --------------------------------------------------- */
+/* #region Body*/
+/* --------------------------------------------------- */
+
+.body-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    background: var(--bg-color);
+
+    padding: 20px;
+    gap: 20px;
+}
+
+/* --------------------------------------------------- */
+/* #endregion */
+/* --------------------------------------------------- */
+
+
+
+
+
+/* --------------------------------------------------- */
+/* #region Effects*/
+/* --------------------------------------------------- */
+
+.image-glow {
+    filter: drop-shadow(0 0 20px var(--neon-color));
+}
+
+.text-brokenNeon {
+    animation: neonBlink 1.5s infinite;
+}
+
+@keyframes neonBlink {
+
+    0%,
+    19%,
+    21%,
+    50%,
+    51%,
+    100% {
+        text-shadow:
+            0 0 5px var(--neon-color),
+            0 0 10px var(--neon-color),
+            0 0 20px var(--neon-color),
+            0 0 40px var(--neon-color),
+            0 0 80px var(--neon-color);
+        color: whitesmoke;
+    }
+
+    20%,
+    50% {
+        text-shadow: none;
+        color: #b8b8b8;
+
+        /* dimmed/off color */
+    }
+}
+
+/* --------------------------------------------------- */
+/* #endregion */
+/* --------------------------------------------------- */
+
+/* --------------------------------------------------- */
+/* #region Background*/
+/* --------------------------------------------------- */
+
+.city-bg {
+    background-color: #1a202c;
+    background-image: url(./images/dither-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    
+
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* --------------------------------------------------- */
+/* #endregion */
+/* --------------------------------------------------- */
+
+
+
+
+/* --------------------------------------------------- */
+/* #region TEST*/
+/* --------------------------------------------------- */
+
+
+/* --------------------------------------------------- */
+/* #endregion */
+/* --------------------------------------------------- */
+
+
+
+
+

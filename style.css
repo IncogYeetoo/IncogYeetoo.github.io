@@ -7,134 +7,44 @@
 :root {
     --neon-color: lightgrey;
     --window-color: #242424;
+
+    /*--window-color: #242424; */
     --bg-color: #404040;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas, monospace;
+    color: whitesmoke;
 }
 
 .origin {
     display: flex;
     flex-direction: column;
     flex: 1;
-        
+
+    background-color: rgba(36, 36, 36, 0.7);
+
+
     height: auto;
-    width: 50%;
+    width: 85%;
     margin: auto;
 
-    padding: 2px
-
+    padding: 20px;
 }
 
 
 /* --------------------------------------------------- */
-/* #region Windows Border*/
+/* #region TEST*/
 /* --------------------------------------------------- */
 
-.windows-border {
-    border: 2px solid #949494;          /* outer highlight */
-
-    box-shadow:
-
-        /* --- OUTER --- */
-
-        /* white light 1 */
-        -0.5px -0.5px 0 0.5px #cccccc,
-
-        /* shadow 1 */
-        0px 0px 0 1px #696969,
-
-        /* white light 2 */
-        -0.5px -0.5px 0 1.5px #b4b4b4,
-
-        /* shadow 2 */
-        0px 0px 0 2px #2d2d2d,
-
-        /* --- INNER --- */
-
-        /*white light 1 */
-        inset -1px -1px 0 #cccccc,
-
-        /* shadow 1 */
-        inset  1px 1px 0 #696969,
-
-        /* white light 2 */
-        inset -2px -2px 0 #b4b4b4,
-
-        /* shadow 2 */
-        inset 2px 2px 0 #2d2d2d;
-}
 
 /* --------------------------------------------------- */
 /* #endregion */
 /* --------------------------------------------------- */
 
-/* --------------------------------------------------- */
-/* #region Windows Buttons*/
-/* --------------------------------------------------- */
-
-.window-bar {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    height: 36px;
-    padding: 0 0 0 12px;
-
-    background: #1f1f1f;
-    color: #f0f0f0;
-
-    font-family: "Segoe UI", sans-serif;
-    user-select: none;
-
-    box-shadow:
-                0 0 0 1px #1f1f1f,
-                0 0 0 4px #949494,
-                0px 4px 0 1px #696969,
-                -1px 6px 0 0px #2d2d2d;
-}
-
-
-
-/* title */
-.window-title {
-    font-size: 14px;
-    font-weight: 500;
-}
-
-/* right-side controls */
-.window-controls {
-    display: flex;
-    height: 100%;
-}
-
-/* buttons */
-.win-btn {
-    width: 46px;
-    height: 100%;
-
-    border: none;
-    outline: none;
-
-    background: transparent;
-    color: #f0f0f0;
-
-    font-size: 14px;
-    cursor: pointer;
-
-    transition: background 0.12s;
-}
-
-/* hover states */
-.win-btn:hover {
-    background: #3a3a3a;
-}
-
-.close:hover {
-    background: #c42b1c;
-}
-
-/* --------------------------------------------------- */
-/* #endregion */
-/* --------------------------------------------------- */
 
 /* --------------------------------------------------- */
 /* #region HEADER*/
@@ -143,22 +53,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-
-    position: relative;
-    overflow: hidden;
-}
-
-
-.header-container::before {
-    content: "";
-    position: absolute;
-    inset: 0px;
-    background-image: url(./images/dither-bg.png);
-    background-size: cover;
-    background-position: bottom -75px left;
-    background-repeat: no-repeat;
-    opacity: 0.5;
-    z-index: -1;
 }
 
 .header-title {
@@ -186,14 +80,48 @@
 /* --------------------------------------------------- */
 
 /* --------------------------------------------------- */
-/* #region Music Bar*/
+/* #region BODY*/
 /* --------------------------------------------------- */
 
-.music-bar{
-    background: #1f1f1f;
+.body-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+}
 
-    height: 30px;
-    vertical-align: center;
+/* --------------------------------------------------- */
+/* #endregion */
+/* --------------------------------------------------- */
+
+/* --------------------------------------------------- */
+/* #region WINDOW*/
+/* --------------------------------------------------- */
+
+.window-container {
+    border: 5px solid var(--window-color);
+    background-color: var(--bg-color);
+    width: 100%;
+}
+
+.window-title {
+    text-align: left;
+    font-size: 28px;
+    font-family: 'Pixelify Sans', monospace;
+
+    background-color: var(--window-color);
+    color: whitesmoke;
+    padding-left: 3px;
+}
+
+.window-paragraph {
+    text-align: left;
+    color: var(--text-color);
+    font-size: 18px;
+    padding: 10px;
+    background-color: transparent;
+    color: whitesmoke;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 /* --------------------------------------------------- */
@@ -202,8 +130,9 @@
 
 
 /* --------------------------------------------------- */
-/* #region Effects*/
+/* #region EFFECTS*/
 /* --------------------------------------------------- */
+
 
 .image-glow {
     filter: drop-shadow(0 0 20px var(--neon-color));
@@ -239,13 +168,126 @@
     }
 }
 
+.crt {
+    animation: simpleCRTshadow 1.6s infinite;
+}
+
+@keyframes simpleCRTshadow {
+    0% {
+        text-shadow: .40px 0 1px rgba(0, 30, 255, .5), -.40px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    5% {
+        text-shadow: 2.80px 0 1px rgba(0, 30, 255, .5), -2.80px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    10% {
+        text-shadow: .03px 0 1px rgba(0, 30, 255, .5), -.03px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    15% {
+        text-shadow: .40px 0 1px rgba(0, 30, 255, .5), -.40px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    20% {
+        text-shadow: 3.48px 0 1px rgba(0, 30, 255, .5), -3.48px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    25% {
+        text-shadow: 1.61px 0 1px rgba(0, 30, 255, .5), -1.61px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    30% {
+        text-shadow: .70px 0 1px rgba(0, 30, 255, .5), -.70px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    35% {
+        text-shadow: 3.90px 0 1px rgba(0, 30, 255, .5), -3.90px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    40% {
+        text-shadow: 3.87px 0 1px rgba(0, 30, 255, .5), -3.87px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    45% {
+        text-shadow: 2.23px 0 1px rgba(0, 30, 255, .5), -2.23px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    50% {
+        text-shadow: .08px 0 1px rgba(0, 30, 255, .5), -.08px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    55% {
+        text-shadow: 2.38px 0 1px rgba(0, 30, 255, .5), -2.38px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    60% {
+        text-shadow: 2.20px 0 1px rgba(0, 30, 255, .5), -2.20px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    65% {
+        text-shadow: 2.86px 0 1px rgba(0, 30, 255, .5), -2.86px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    70% {
+        text-shadow: .49px 0 1px rgba(0, 30, 255, .5), -.49px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    75% {
+        text-shadow: 1.89px 0 1px rgba(0, 30, 255, .5), -1.89px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    80% {
+        text-shadow: .08px 0 1px rgba(0, 30, 255, .5), -.08px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    85% {
+        text-shadow: .10px 0 1px rgba(0, 30, 255, .5), -.10px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    90% {
+        text-shadow: 3.44px 0 1px rgba(0, 30, 255, .5), -3.44px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    95% {
+        text-shadow: 2.18px 0 1px rgba(0, 30, 255, .5), -2.18px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+
+    100% {
+        text-shadow: 2.62px 0 1px rgba(0, 30, 255, .5), -2.62px 0 1px rgba(255, 0, 80, .3), 0 0 3px
+    }
+}
+
 /* --------------------------------------------------- */
 /* #endregion */
 /* --------------------------------------------------- */
 
+
 /* --------------------------------------------------- */
-/* #region Background*/
+/* #region BACKGROUND*/
 /* --------------------------------------------------- */
+
+
+.crt::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background:
+        linear-gradient(rgba(18, 16, 16, 0) 50%,
+            rgba(0, 0, 0, 0.25) 50%),
+        linear-gradient(90deg,
+            rgba(255, 0, 0, 0.06),
+            rgba(0, 255, 0, 0.02),
+            rgba(0, 0, 255, 0.06));
+
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
 
 .city-bg {
     background-color: #1a202c;
@@ -259,23 +301,20 @@
     margin: 0;
 }
 
+.snow-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('./images/snow.gif') repeat;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 25%;
+}
+
+
 /* --------------------------------------------------- */
 /* #endregion */
 /* --------------------------------------------------- */
-
-
-
-
-/* --------------------------------------------------- */
-/* #region TEST*/
-/* --------------------------------------------------- */
-
-
-/* --------------------------------------------------- */
-/* #endregion */
-/* --------------------------------------------------- */
-
-
-
-
 
