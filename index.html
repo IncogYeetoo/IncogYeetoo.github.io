@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <title>New IncogYeetoo Tab</title>
     <link rel="stylesheet" href="style.css">
+    <script src="./scripts/effect-toggle.js" defer></script>
 </head>
 
-<body class="crt city-bg">
+<body id="app" class="effect-crt effect-snow effect-neon city-bg" >
 
-    
+    <div class="snow-overlay"></div>
     <br>
 
     <div class="origin">
@@ -32,13 +33,27 @@
         <!-- About Me -->
 
         <div class="body-container">
-            <div class="window-container" style="width: 100%;">
+            <div class="window-container" style="width: auto;">
                 <h2 class="window-title">//Welcome</h2>
-                <p class="window-paragraph">Ello, this is my personal webpage so i can practice coding and share my interests. <br>
-                    this website is <strong>heavily</strong>  work in progress, most of it is self-taught so forgive any scuffness.</p>
+                <p class="window-paragraph">Hello! Welcome to my personal website. <br>
+                    I use this space to practice coding, experiment with new ideas, and share some of my interests and projects. <br>
+                    Most of what you'll find here was built as part of my self-taught learning journey, so things may be a little rough around the edges while I continue improving and adding new features.</p>
+            </div>
+
+            <div class="window-container" style="width: 25%;">
+                <h2 class="window-title">//Links</h2>
+
+                <div class="links-container">
+                    <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn">
+                    <img src="./images/Logos/linkedin.png" alt="LinkedIn">
+                    </a>
+
+                    <a href="https://github.com/" target="_blank" title="GitHub">
+                        <img src="./images/Logos/github.png" alt="GitHub">
+                    </a>
+                </div>
             </div>
         </div>
-
 
         <!-- Music Bar -->
 
@@ -76,11 +91,10 @@
 
 
             <div class=" window-container" style="width: 70%;">
-                <h2 class="window-title">//Links</h2>
-                <u1>
-                    <li data-page="">github</li>
-                    <li data-page="">spotify? idk</li>
-                </u1>
+                <h2 class="window-title">//Buttons</h2>
+                <button class="glowing-button" id="snowToggle">Toggle Snow</button>
+                <button class="glowing-button" id="crtToggle">Toggle CRT</button>
+                <button class="glowing-button" id="neonToggle">Toggle Neon</button>
             </div>
 
         </div>
@@ -115,5 +129,5 @@
     </div>
 
 
-    <div class="snow-overlay"></div>
+    
 </body>
