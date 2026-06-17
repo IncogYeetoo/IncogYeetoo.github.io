@@ -17,36 +17,40 @@
 
         <!-- Header -->
 
-        <header class="header-container">
+        <header class="header">
             <img 
-                class="header-image image-glow" src="./images/incognito.png" alt="" width="150" height="150">
-            <h1 class="header-title">
-                <span class="text-brokenNeon">You've gone</span>
-                IncogYeeto<span class="text-brokenNeon">o</span>
+                class="header__image--glow" src="./images/incognito.png" alt="" width="150" height="150">
+            <h1>
+                <span class="header__h1--blink">You've gone</span>
+                IncogYeeto<span class="header__h1--blink">o</span>
             </h1>
         </header>
 
         <!-- About Me -->
 
-        <section class="body-container">
-            <div class="window-container" style="width: auto;">
-                <h2 class="window-title">//Welcome</h2>
-                <p class="window-paragraph">Hello! Welcome to my personal website. </p>
-                <p class="window-paragraph">I use this space to practice coding, experiment with new ideas, and share some of my interests and projects.</p>
-                <p class="window-paragraph">Most of what you'll find here was built as part of my self-taught learning journey, so things may be a little rough around the edges while I continue improving and adding new features.</p>    
+        <section class="section">
+            <div class="window" style="flex: 3;">
+                <h1>Welcome</h1>
+                <p>Hello! Welcome to my personal website. </p>
+                <p>I use this space to practice coding, experiment with new ideas, and share some of my interests and projects.</p>
+                <p>Most of what you'll find here was built as part of my self-taught learning journey, so things may be a little rough around the edges while I continue improving and adding new features.</p>    
                     
             </div>
 
-            <div class="window-container" style="width: 25%;">
-                <h2 class="window-title">//Links</h2>
+            <div class="window" style="flex: 1;">
+                <h1>Links</h1>
 
-                <nav class="links-container">
-                    <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn">
+                <nav class="links">
+                    <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn" rel="noopener noreferrer">
                     <img src="./images/Logos/linkedin.png" alt="LinkedIn">
                     </a>
 
-                    <a href="https://github.com/" target="_blank" title="GitHub">
-                        <img src="./images/Logos/github.png" alt="GitHub">
+                    <a href="https://github.com/" target="_blank" title="GitHub" rel="noopener noreferrer">
+                    <img src="./images/Logos/github.png" alt="GitHub">
+                    </a>
+
+                    <a href="https://akasha.cv" target="_blank" title="Akasha" rel="noopener noreferrer">
+                    <img src="./images/Logos/akasha.png" alt="Akasha">
                     </a>
                 </nav>
             </div>
@@ -55,9 +59,9 @@
 
         <!-- Music Bar -->
 
-        <section class="body-container">
-            <div class="window-container" style="width: 100%; background-color: transparent;">
-                <h2 class="window-title">//Playlists (music not mine)</h2>
+        <section class="section">
+            <div class="window" style="flex: 1; height: auto; background-color: transparent;">
+                <h1>Playlists (music not mine)</h1>
                 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7e8PP5hhw3SC2RRGO8bpPa?utm_source=generator&theme=0&si=113f030693c6456d" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
             </div>
 
@@ -65,10 +69,10 @@
         
         <!-- Body -->
 
-        <section class="body-container">
+        <section class="section">
 
-            <div class="window-container" style="width: 30%;">
-                <h2 class="window-title">//Menu</h2>
+            <div class="window" style="flex: 2">
+                <h1>Menu</h1>
                 
                 <u1>
                     <li data-page="">Home</li>
@@ -79,36 +83,34 @@
 
             </div>
 
-            <div class="window-container" style="width: 30%;">
-                <h2 class="window-title">//Home</h2>
-                <h1>what do you want?
+            <div class="window" style="flex: 2;">
+                <h1>Home</h1>
+                <p>what do you want?
                     add a banner idfk
-                </h1>
+                </p>
 
             </div>
 
 
-            <div class=" window-container" style="width: 70%;">
-                <h2 class="window-title">//Buttons</h2>
-                <button class="glowing-button" id="snowToggle">Toggle Snow</button>
-                <button class="glowing-button" id="crtToggle">Toggle CRT</button>
-                <button class="glowing-button" id="neonToggle">Toggle Neon</button>
+            <div class=" window" style="flex: 4;">
+                <h1>Buttons</h1>
+                <button class="window__button--glowing" id="snowToggle">Toggle Snow</button>
+                <button class="window__button--glowing" id="crtToggle">Toggle CRT</button>
+                <button class="window__button--glowing" id="neonToggle">Toggle Neon</button>
             </div>
 
         </section>
 
 
-        <section class="body-container">
+        <section class="section">
 
-            <div class="window-container" style="width: 15%">
-                <h2 class="window-title">//Test</h2>
-                
-
+            <div class="window" style="flex: 1;">
+                <h1>Test</h1>
             </div>
 
-            <div class="window-container" style="width: auto;">
-                <h2 class="window-title">//References</h2>
-                <p class="window-paragraph">
+            <div class="window" style="flex: 4;">
+                <h1>References</h1>
+                <p>
                     crt effect - https://aleclownes.com/2017/02/01/crt-display.html <br>
                     button - https://uiverse.io/zjssun/tidy-sloth-40 <br>
                     font i should use for later - https://fonts.google.com/specimen/Ubuntu+Sans+Mono <br>
@@ -116,10 +118,10 @@
                 </p>
             </div>
 
-            <div class=" window-container" style="width: 26.1%; margin-left: auto;">
-                <h2 class="window-title">//Furina pic</h2>
+            <div class=" window" style="flex: 2; margin-left: auto;">
+                <h1>Furina pic</h1>
                 <img src="./images/FurinaScarf.jpg" style="width: 400px;"></img>
-                <p class="window-paragraph">mandatory</p>
+                <p>mandatory</p>
 
             </div>
 

@@ -6,10 +6,9 @@
 
 :root {
     --neon-color: lightgrey;
-    --window-color: #242424;
-
-    /*--window-color: #242424; */
-    --bg-color: #404040;
+    --window-color: #9e3aa9;
+    --bg-color: #111111;
+    --text-color: whitesmoke;
 }
 
 * {
@@ -22,14 +21,9 @@
     flex-direction: column;
     flex: 1;
 
-    background-color: rgba(36, 36, 36, 0.7);
-
-
     height: auto;
     width: 85%;
     margin: auto;
-
-    /* padding: 20px; */
 }
 
 
@@ -45,160 +39,33 @@
 /* --------------------------------------------------- */
 /* #region HEADER*/
 /* --------------------------------------------------- */
-.header-container {
+
+.header {
     display: flex;
     align-items: center;
     flex-direction: column;
+
+    margin-top: 2rem;
 }
 
-.header-image{
+.header img{
     width: 150px;
-    margin-bottom: 1rem;
+    
 }
 
-.header-title {
-
+.header h1 {
     text-align: center;
     font-size: 48px;
     font-family: homenaje, serif;
 
-    color: whitesmoke;
+    color: var(--text-color);
 
     position: relative;
-
-    margin-bottom: 1rem;
 }
-
-/* --------------------------------------------------- */
-/* #endregion */
-/* --------------------------------------------------- */
-
-/* --------------------------------------------------- */
-/* #region LINKS*/
-/* --------------------------------------------------- */
-
-.links-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-    justify-items: center; 
-    align-items: center;
-}
-
-.links-container a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.links-container img {
-    width: 100px; margin: 10px;
-}
-
-
-
-
-/* --------------------------------------------------- */
-/* #endregion */
-/* --------------------------------------------------- */
-
-/* --------------------------------------------------- */
-/* #region BODY*/
-/* --------------------------------------------------- */
-
-.body-container {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    margin: 20px;
-
-    box-sizing: border-box;
-    font-family: consolas, monospace;
-    color: whitesmoke;
-}
-
-/* --------------------------------------------------- */
-/* #endregion */
-/* --------------------------------------------------- */
-
-/* --------------------------------------------------- */
-/* #region WINDOW*/
-/* --------------------------------------------------- */
-
-.window-container {
-    border: 5px solid var(--window-color);
-    background-color: var(--bg-color);
-    width: 100%;
-}
-
-.window-title {
-    text-align: left;
-    font-size: 28px;
-    font-family: 'Pixelify Sans', monospace;
-
-    background-color: var(--window-color);
-    color: whitesmoke;
-    padding-left: 3px;
-}
-
-.window-paragraph {
-    text-align: left;
-    color: var(--text-color);
-    font-size: 18px;
-    padding: 10px;
-    background-color: transparent;
-    color: whitesmoke;
-    transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-/* --------------------------------------------------- */
-/* #endregion */
-/* --------------------------------------------------- */
-
-/* --------------------------------------------------- */
-/* #region BUTTON*/
-/* --------------------------------------------------- */
-
-.glowing-button {
-  padding: 10px 20px;
-  text-transform: uppercase;
-  border-radius: 8px;
-  font-size: 17px;
-  font-weight: 500;
-  color: #ffffff80;
-  text-shadow: none;
-  background: transparent;
-  cursor: pointer;
-  box-shadow: transparent;
-  border: 1px solid #ffffff80;
-  transition: 0.5s ease;
-  user-select: none;
-
-  margin: 10px;
-}
-
-.glowing-button:hover,
-:focus {
-  color: #ffffff;
-  background: #008cff;
-  border: 1px solid #008cff;
-  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
-  box-shadow: 0 0 1px #008cff, 0 0 5px #008cff, 0 0 10px #008cff;
-}
-
-
-/* --------------------------------------------------- */
-/* #endregion */
-/* --------------------------------------------------- */
-
-/* --------------------------------------------------- */
-/* #region EFFECTS*/
-/* --------------------------------------------------- */
-
 
 /* NEON EFFECT */
-.effect-neon .header-title {
+
+.effect-neon .header h1 {
     text-shadow:
         0 0 5px var(--neon-color),
         0 0 10px var(--neon-color),
@@ -207,12 +74,11 @@
         0 0 80px var(--neon-color);
 }
 
-.effect-neon .image-glow {
+.effect-neon .header__image--glow {
     filter: drop-shadow(0 0 20px var(--neon-color));
 }
 
-/* blinking only when neon is ON */
-.effect-neon .text-brokenNeon {
+.effect-neon .header__h1--blink {
     animation: neonBlink 1.5s infinite;
 }
 
@@ -242,6 +108,135 @@
     }
 }
 
+
+
+
+
+/* --------------------------------------------------- */
+/* #endregion */
+/* --------------------------------------------------- */
+
+/* --------------------------------------------------- */
+/* #region LINKS*/
+/* --------------------------------------------------- */
+
+.links {
+    display: flex;
+
+    justify-items: center; 
+    align-items: center;
+}
+
+.links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.links img {
+    width: 100px;
+    margin: 1rem;
+}
+
+@media (max-width: 768px) {
+    .links {
+        flex-direction: column;
+    }
+}
+
+
+
+
+/* --------------------------------------------------- */
+/* #endregion */
+/* --------------------------------------------------- */
+
+/* --------------------------------------------------- */
+/* #region SECTION*/
+/* --------------------------------------------------- */
+
+.section {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 20px;
+}
+
+/* --------------------------------------------------- */
+/* #endregion */
+/* --------------------------------------------------- */
+
+/* --------------------------------------------------- */
+/* #region WINDOW*/
+/* --------------------------------------------------- */
+
+.window {
+    text-align: left;
+    
+    border: 5px solid var(--window-color);
+    
+    background-color: var(--bg-color);
+    color: var(--text-color);    
+}
+
+.window h1 {
+    font-family: 'Pixelify Sans', monospace;
+    font-size: 28px;
+
+    padding-left: 3px;
+
+    background-color: var(--window-color);
+}
+
+.window h1::before {
+    content: "//";
+}
+
+.window p {
+    font-family: consolas, monospace;
+    font-size: 18px;
+
+    padding: 10px;
+
+    background-color: var(--bg-color);
+}
+
+.window__button--glowing {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff80;
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
+
+  margin: 10px;
+}
+
+.window__button--glowing:hover,
+:focus {
+  color: #ffffff;
+  background: #008cff;
+  border: 1px solid #008cff;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 1px #008cff, 0 0 5px #008cff, 0 0 10px #008cff;
+}
+
+
+/* --------------------------------------------------- */
+/* #endregion */
+/* --------------------------------------------------- */
+
+/* --------------------------------------------------- */
+/* #region EFFECTS*/
+/* --------------------------------------------------- */
 
 /* SNOW EFFECT */
 .effect-snow .snow-overlay {
@@ -384,7 +379,6 @@
     background-size: 100%;
     background-position: bottom;
     
-
     min-height: 100vh;
     margin: 0;
 }
